@@ -1,0 +1,71 @@
+{
+  "name": "blood-bank-management-system",
+  "version": "1.0.0",
+  "description": "Blood Bank Management System - Complete web application for managing blood bank operations",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:basic": "node tests/test_basic.js",
+    "test:comprehensive": "node tests/test_comprehensive.js",
+    "test:associations": "node tests/test_associations.js",
+    "test:backend": "node tests/test_backend_database.js",
+    "db:create": "database\\create_database.bat",
+    "db:triggers": "mysql -u root -p < database\\create_triggers.sql",
+    "start:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "start:full": "concurrently \"npm run start\" \"npm run start:frontend\""
+  },
+  "keywords": [
+    "blood-bank",
+    "healthcare",
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "TEDROD Development Team",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^6.0.0",
+    "@mui/material": "^6.0.0",
+    "axios": "^1.13.2",
+    "bcryptjs": "^3.0.3",
+    "chai": "^6.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mocha": "^11.7.5",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.11.0",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.11",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
